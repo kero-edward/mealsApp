@@ -1,0 +1,42 @@
+/* for responsive design */
+@media screen and (max-width: 1150px) {
+    #meals .card {
+        height: 250px;
+    }
+}
+
+@media screen and (max-width: 991px) {
+    #meals .card {
+        height: 150px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    #meals .card {
+        height: 350px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    #meals .card {
+        height: 300px;
+    }
+}
+
+@media screen and (max-width: 449px) {
+    #meals .card {
+        height: 250px;
+    }
+}
+
+@media screen and (max-width: 330px) {
+    #meals .card {
+        height: 200px;
+    }
+}
+
+@media screen and (max-width: 285px) {
+    #meals .card {
+        height: 160px;
+    }
+}

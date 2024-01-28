@@ -1,0 +1,184 @@
+body {
+    overflow-x: hidden;
+    box-sizing: border-box;
+}
+
+aside {
+    display: flex;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 99;
+    height: 100vh;
+    background-color: #fff;
+}
+
+#list-example {
+    width: 250px;
+    position: fixed;
+    top: 0;
+    left: -250px;
+    bottom: 0;
+    z-index: 999;
+    height: 100%;
+    background-color: #000;
+    border-radius: 0;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    -ms-border-radius: 0;
+    -o-border-radius: 0;
+}
+
+aside .openMenu {
+    width: 90px;
+}
+
+aside .openMenu .menuIcon i {
+    font-size: 2vw;
+}
+
+aside i {
+    cursor: pointer;
+}
+
+aside .openMenu i.closeIcon {
+    display: none;
+}
+
+aside #list-example .list-group-item {
+    border: 0;
+    background-color: unset;
+    color: #fff;
+    top: 200px;
+    cursor: pointer;
+}
+
+#meals {
+    background-image: url("../images/background.avif");
+    background-repeat: no-repeat;
+    background-size: cover;
+    object-fit: cover;
+    background-attachment: fixed;
+    background-position: center center;
+    min-height: 100vh;
+    position: relative;
+    margin-left: 90px;
+}
+
+#meals .overlay {
+    background-color: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+#meals .card {
+    cursor: pointer;
+    height: 305px;
+}
+
+#meals .card img {
+    object-fit: cover;
+    height: 100%;
+}
+
+#meals .card .mealNameLayer {
+    background-color: rgba(249, 246, 246, 0.7);
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    transition: all 0.4s ease-in-out;
+    -webkit-transition: all 0.4s ease-in-out;
+    -moz-transition: all 0.4s ease-in-out;
+    -ms-transition: all 0.4s ease-in-out;
+    -o-transition: all 0.4s ease-in-out;
+    transform: translateY(100%);
+    -webkit-transform: translateY(100%);
+    -moz-transform: translateY(100%);
+    -ms-transform: translateY(100%);
+    -o-transform: translateY(100%);
+}
+
+#meals .card:hover .mealNameLayer {
+    transform: translateY(0);
+    -webkit-transform: translateY(0);
+    -moz-transform: translateY(0);
+    -ms-transform: translateY(0);
+    -o-transform: translateY(0);
+}
+
+.loaderBox {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #000;
+    z-index: 999999999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loader {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    display: inline-block;
+    position: relative;
+    border: 3px solid;
+    border-color: #FFF #FFF transparent;
+    box-sizing: border-box;
+    animation: rotation 1s linear infinite;
+}
+
+.loader::after {
+    content: '';
+    box-sizing: border-box;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    border: 3px solid;
+    border-color: transparent #FDCF11 #FDCF11;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    animation: rotationBack 0.5s linear infinite;
+    transform-origin: center center;
+}
+
+@keyframes rotation {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes rotationBack {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(-360deg);
+    }
+}
+
+.nameAlert,
+.emailAlert,
+.phoneAlert,
+.ageAlert,
+.passAlert,
+.rePassAlert {
+    display: none;
+}
